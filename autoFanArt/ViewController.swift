@@ -168,7 +168,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       
         let newButton01 = UIButton()
         newButton01.contentMode = .scaleAspectFit
-        newButton01.setImage(UIImage(named: "filterImage_01"), for: .normal)
+        newButton01.setImage(UIImage(named: "JohnLennonImage"), for: .normal)
        // newButton01.imageEdgeInsets = .init(top: 0, left: 10, bottom: 0, right: 10)
         newButton01.addTarget(self, action: #selector(buttonClicked01), for: .touchUpInside)
         newButton01.frame = CGRect(x: CGFloat(1) * xUnit,
@@ -181,7 +181,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
         let newButton02 = UIButton()
         newButton02.contentMode = .scaleAspectFit
-        newButton02.setImage(UIImage(named: "filterImage_02"), for: .normal)
+        newButton02.setImage(UIImage(named: "PerpleFlower"), for: .normal)
        // newButton02.imageEdgeInsets = .init(top: 0, left: 10, bottom: 0, right: 10)
         newButton02.addTarget(self, action: #selector(buttonClicked02), for: .touchUpInside)
         newButton02.frame = CGRect(x: CGFloat(2) * xUnit,
@@ -194,7 +194,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let newButton03 = UIButton()
         newButton03.contentMode = .scaleAspectFit
-        newButton03.setImage(UIImage(named: "filterImage_03"), for: .normal)
+        newButton03.setImage(UIImage(named: "YellowFlower"), for: .normal)
        // newButton03.imageEdgeInsets = .init(top: 0, left: 10, bottom: 0, right: 10)
         newButton03.addTarget(self, action: #selector(buttonClicked03), for: .touchUpInside)
         newButton03.frame = CGRect(x: CGFloat(3) * xUnit,

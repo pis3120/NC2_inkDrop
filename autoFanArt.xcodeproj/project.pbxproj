@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF49AA0D28CCE06400D66D48 /* purple_flower.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AF49AA0C28CCE06400D66D48 /* purple_flower.mlmodel */; };
 		AF6B824028BE139700F5550D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B823F28BE139700F5550D /* AppDelegate.swift */; };
 		AF6B824228BE139700F5550D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B824128BE139700F5550D /* SceneDelegate.swift */; };
 		AF6B824428BE139700F5550D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B824328BE139700F5550D /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF49AA0C28CCE06400D66D48 /* purple_flower.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = purple_flower.mlmodel; sourceTree = "<group>"; };
 		AF6B823C28BE139700F5550D /* autoFanArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autoFanArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6B823F28BE139700F5550D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6B824128BE139700F5550D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				AF6B824A28BE139800F5550D /* LaunchScreen.storyboard */,
 				AF6B824D28BE139800F5550D /* Info.plist */,
 				AF6B825328BE28E000F5550D /* JohnLennonFilter.mlmodel */,
+				AF49AA0C28CCE06400D66D48 /* purple_flower.mlmodel */,
 			);
 			path = autoFanArt;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				AF6B824428BE139700F5550D /* ViewController.swift in Sources */,
 				AF6B824028BE139700F5550D /* AppDelegate.swift in Sources */,
 				AF6B824228BE139700F5550D /* SceneDelegate.swift in Sources */,
+				AF49AA0D28CCE06400D66D48 /* purple_flower.mlmodel in Sources */,
 				AF6B825428BE28E000F5550D /* JohnLennonFilter.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
