@@ -190,7 +190,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @objc func buttonClicked00() {
         print("button00 Clicked")
-        let model = JohnLennonFilter()
+        
+        let model: JohnLennonFilter = {
+        do {
+            let config = MLModelConfiguration()
+            return try JohnLennonFilter(configuration: config)
+        } catch {
+            print(error)
+            fatalError("Couldn't create SleepCalculator")
+        }
+        }()
         
         if let image = pixelBuffer(from: imageView.image!) {
             do {
@@ -208,6 +217,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @objc func buttonClicked01() {
         print("button01 Clicked")
+        
+        let model: purple_flower = {
+        do {
+            let config = MLModelConfiguration()
+            return try purple_flower(configuration: config)
+        } catch {
+            print(error)
+            fatalError("Couldn't create SleepCalculator")
+        }
+        }()
+        
+        if let image = pixelBuffer(from: imageView.image!) {
+            do {
+                let predictionOutput = try model.prediction(image: image)
+                
+                let ciImage = CIImage(cvPixelBuffer: predictionOutput.stylizedImage)
+                let tempContext = CIContext(options: nil)
+                let tempImage = tempContext.createCGImage(ciImage, from: CGRect(x: 0, y: 0, width: CVPixelBufferGetWidth(predictionOutput.stylizedImage), height: CVPixelBufferGetHeight(predictionOutput.stylizedImage)))
+                imageView.image = UIImage(cgImage: tempImage!)
+            } catch let error as NSError {
+                print("CoreML Model Error: \(error)")
+            }
+        }
     }
     
     @objc func buttonClicked02() {
