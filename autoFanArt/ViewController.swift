@@ -197,7 +197,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             return try JohnLennonFilter(configuration: config)
         } catch {
             print(error)
-            fatalError("Couldn't create SleepCalculator")
+            fatalError("Couldn't create JohnLennonFilter")
         }
         }()
         
@@ -224,7 +224,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             return try purple_flower(configuration: config)
         } catch {
             print(error)
-            fatalError("Couldn't create SleepCalculator")
+            fatalError("Couldn't create purple_flower")
         }
         }()
         
@@ -244,9 +244,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @objc func buttonClicked02() {
         print("button02 Clicked")
-    }
-    
-    @objc func buttonClicked03() {
-        print("button03 Clicked")
     }
 }
