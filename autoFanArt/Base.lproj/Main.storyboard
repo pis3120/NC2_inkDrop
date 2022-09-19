@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,26 +13,26 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="autoFanArt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mks-4p-Ju0">
+                                <rect key="frame" x="43" y="509" width="304" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="B9U-cs-yAd"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="tZV-0E-5wZ"/>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upN-RI-6gx">
-                                <rect key="frame" x="103" y="403" width="169" height="31"/>
+                                <rect key="frame" x="122" y="407" width="146" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="팬아트 저장"/>
                                 <connections>
-                                    <action selector="ImageChangeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmd-Lc-hdl"/>
+                                    <action selector="imgSaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tby-E7-riq"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mks-4p-Ju0">
-                                <rect key="frame" x="35" y="496" width="304" height="244"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="B9U-cs-yAd"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="tZV-0E-5wZ"/>
-                            </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus.rectangle.fill.on.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xwf-kR-1C7">
-                                <rect key="frame" x="35" y="114.66666666666663" width="304" height="244"/>
+                                <rect key="frame" x="61" y="115.66666666666663" width="269" height="242"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                             </imageView>
@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-20.289855072463769" y="69.642857142857139"/>
+            <point key="canvasLocation" x="-21.538461538461537" y="68.957345971563981"/>
         </scene>
     </scenes>
     <resources>

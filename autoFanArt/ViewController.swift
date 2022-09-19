@@ -7,6 +7,8 @@
 
 import UIKit
 import Vision
+import AVFoundation
+import Photos
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -31,11 +33,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         view.backgroundColor = #colorLiteral(red: 0.915378511, green: 0.931581676, blue: 0.9433452487, alpha: 1)
         
-
+        checkCameraPermission()
+        checkAlbumPermission()
     }
     
     @objc func touchToPickPhoto(_ gesture: UITapGestureRecognizer) {
-         print("dd")
          let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
          
          //Defining Camera Action
@@ -91,6 +93,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
 
+    @IBAction func imgSaveButton(_ sender: Any) {
+        if imageView.image == UIImage(systemName: "plus.rectangle.fill.on.rectangle.fill") {
+            let ac = UIAlertController(title: "There are no images to save!", message: "I want your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(imageSave(_:didFinishSavingWithError:contextInfo:)), nil)
+            imageView.image = UIImage(systemName: "plus.rectangle.fill.on.rectangle.fill")
+        }
+    }
+    
     //the delegate take the media that you have choose in the picker and pass it to the variable
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
@@ -187,6 +200,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
             verticalScrollPage.addSubview(newButton02)
     }
+    
+    func checkCameraPermission(){
+          AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted: Bool) in
+              if granted {
+                  print("Camera: 권한 허용")
+              } else {
+                  print("Camera: 권한 거부")
+              }
+          })
+       }
+    
+    func checkAlbumPermission(){
+          PHPhotoLibrary.requestAuthorization( { status in
+              switch status{
+              case .authorized:
+                  print("Album: 권한 허용")
+              case .denied:
+                  print("Album: 권한 거부")
+              case .restricted, .notDetermined:
+                  print("Album: 선택하지 않음")
+              default:
+                  break
+              }
+          })
+      }
     
     @objc func buttonClicked00() {
         print("button00 Clicked")
