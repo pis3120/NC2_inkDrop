@@ -19,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		AF49AA0C28CCE06400D66D48 /* purple_flower.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = purple_flower.mlmodel; sourceTree = "<group>"; };
-		AF6B823C28BE139700F5550D /* autoFanArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autoFanArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF6B823C28BE139700F5550D /* inkDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inkDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6B823F28BE139700F5550D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6B824128BE139700F5550D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF6B824328BE139700F5550D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		AF6B823D28BE139700F5550D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF6B823C28BE139700F5550D /* autoFanArt.app */,
+				AF6B823C28BE139700F5550D /* inkDrop.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF6B823B28BE139700F5550D /* autoFanArt */ = {
+		AF6B823B28BE139700F5550D /* inkDrop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF6B825028BE139800F5550D /* Build configuration list for PBXNativeTarget "autoFanArt" */;
+			buildConfigurationList = AF6B825028BE139800F5550D /* Build configuration list for PBXNativeTarget "inkDrop" */;
 			buildPhases = (
 				AF6B823828BE139700F5550D /* Sources */,
 				AF6B823928BE139700F5550D /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = autoFanArt;
+			name = inkDrop;
 			productName = autoFanArt;
-			productReference = AF6B823C28BE139700F5550D /* autoFanArt.app */;
+			productReference = AF6B823C28BE139700F5550D /* inkDrop.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF6B823B28BE139700F5550D /* autoFanArt */,
+				AF6B823B28BE139700F5550D /* inkDrop */,
 			);
 		};
 /* End PBXProject section */
@@ -356,7 +356,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF6B825028BE139800F5550D /* Build configuration list for PBXNativeTarget "autoFanArt" */ = {
+		AF6B825028BE139800F5550D /* Build configuration list for PBXNativeTarget "inkDrop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF6B825128BE139800F5550D /* Debug */,
