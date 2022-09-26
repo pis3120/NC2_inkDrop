@@ -12,13 +12,10 @@ import Photos
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    //MARK: - IBOutlet
     @IBOutlet weak var imageView: UIImageView!
     
-    //MARK: - Properties
     var style:Int?
     
-    //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(touchToPickPhoto(_:)))
@@ -65,7 +62,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
          present(actionSheet, animated: true, completion: nil)
      }
     
-    // MARK: Private Methods
     private func presentImagePicker(withType type: UIImagePickerController.SourceType) {
         //Definiton of imagePickerController with Delegate, sourceType and Present
         let pickerController = UIImagePickerController()
@@ -74,7 +70,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(pickerController, animated: true)
     }
     
-    //MARK: - @objc Function
     //Alert displayed when you have applied the effect
     @objc func imageSave(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
@@ -164,7 +159,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let newButton00 = UIButton()
         newButton00.contentMode = .scaleAspectFit
         newButton00.setImage(UIImage(named: "JohnLennonImage"), for: .normal)
-       // newButton00.imageEdgeInsets = .init(top: 0, left: 10, bottom: 0, right: 10)
         newButton00.addTarget(self, action: #selector(buttonClicked00), for: .touchUpInside)
         newButton00.frame = CGRect(x: CGFloat(0) * xUnit,
                                             y: 0,
@@ -178,7 +172,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let newButton01 = UIButton()
         newButton01.contentMode = .scaleAspectFit
         newButton01.setImage(UIImage(named: "PerpleFlower"), for: .normal)
-       // newButton01.imageEdgeInsets = .init(top: 0, left: 10, bottom: 0, right: 10)
         newButton01.addTarget(self, action: #selector(buttonClicked01), for: .touchUpInside)
         newButton01.frame = CGRect(x: CGFloat(1) * xUnit,
                                         y: 0,
@@ -191,7 +184,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let newButton02 = UIButton()
         newButton02.contentMode = .scaleAspectFit
         newButton02.setImage(UIImage(named: "YellowFlower"), for: .normal)
-       // newButton02.imageEdgeInsets = .init(top: 0, left: 10, bottom: 0, right: 10)
         newButton02.addTarget(self, action: #selector(buttonClicked02), for: .touchUpInside)
         newButton02.frame = CGRect(x: CGFloat(2) * xUnit,
                                         y: 0,
