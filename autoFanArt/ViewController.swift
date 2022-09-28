@@ -221,6 +221,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @objc func buttonClicked00() {
         print("button00 Clicked")
         
+        
         let model: JohnLennonFilter = {
         do {
             let config = MLModelConfiguration()
@@ -230,7 +231,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             fatalError("Couldn't create JohnLennonFilter")
         }
         }()
-        
+        if imageView.image != UIImage(systemName: "plus.rectangle.fill.on.rectangle.fill") {
         if let image = pixelBuffer(from: imageView.image!) {
             do {
                 let predictionOutput = try model.prediction(image: image)
@@ -242,6 +243,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             } catch let error as NSError {
                 print("CoreML Model Error: \(error)")
             }
+        }
         }
     }
     
@@ -257,7 +259,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             fatalError("Couldn't create purple_flower")
         }
         }()
-        
+        if imageView.image != UIImage(systemName: "plus.rectangle.fill.on.rectangle.fill") {
         if let image = pixelBuffer(from: imageView.image!) {
             do {
                 let predictionOutput = try model.prediction(image: image)
@@ -270,6 +272,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 print("CoreML Model Error: \(error)")
             }
         }
+    }
     }
     
     @objc func buttonClicked02() {
