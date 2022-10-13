@@ -32,7 +32,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         checkCameraPermission()
         checkAlbumPermission()
+        
     }
+    
+  
     
     @objc func touchToPickPhoto(_ gesture: UITapGestureRecognizer) {
          let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -221,7 +224,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @objc func buttonClicked00() {
         print("button00 Clicked")
         
-        
         let model: JohnLennonFilter = {
         do {
             let config = MLModelConfiguration()
@@ -246,7 +248,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         }
     }
-    
+
     @objc func buttonClicked01() {
         print("button01 Clicked")
         
