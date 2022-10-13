@@ -35,8 +35,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-  
-    
     @objc func touchToPickPhoto(_ gesture: UITapGestureRecognizer) {
          let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
          
@@ -53,7 +51,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                  self.presentImagePicker(withType: .photoLibrary)
              }
          }
-         
          //Defining Cancel Action
          let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
          
@@ -170,8 +167,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
                 verticalScrollPage.addSubview(newButton00)
         
-        
-      
         let newButton01 = UIButton()
         newButton01.contentMode = .scaleAspectFit
         newButton01.setImage(UIImage(named: "PerpleFlower"), for: .normal)
